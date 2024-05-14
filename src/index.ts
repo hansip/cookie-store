@@ -238,7 +238,7 @@ class CookieStore extends EventTarget {
         break;
     }
 
-    const previousCookie = this.get(item);
+    const previousCookie = await this.get(item);
     document.cookie = cookieString;
 
     if (this.onchange) {
